@@ -40,18 +40,6 @@
             aria-controls="primary-navigation"
             aria-expanded="false"
           >
-            <img
-              class="icon-hamburger"
-              src="images/icon-hamburger.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <img
-              class="icon-close"
-              src="images/icon-close.svg"
-              alt=""
-              aria-hidden="true"
-            />
             <span class="visually-hidden">Menu</span>
           </button>
           <nav
@@ -75,7 +63,7 @@
     </header>
 
     <main>
-      <section class="padding-block-900">
+      <section class="hero | text-center-sm-only padding-block-900">
         <div class="container">
           <div class="even-columns">
             <div class="flow">
@@ -88,17 +76,19 @@
               </p>
               <button class="button">Get Started</button>
             </div>
-            <div>
-              <img src="images/illustration-intro.svg" />
+            <div class="hero__image">
+              <img class="mx-auto" src="images/illustration-intro.svg" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="padding-block-900">
+      <section class="sales-points | padding-block-900">
         <div class="container">
           <div class="even-columns">
-            <div class="flow text-center-sm-only margin-bottom-700">
+            <div
+              class="sales-points__blog | flow text-center-sm-only margin-bottom-700"
+            >
               <h2 class="fs-secondary-heading fw-bold">
                 What’s different about Manage?
               </h2>
@@ -154,7 +144,7 @@
         </div>
       </section>
 
-      <section class="carousel | padding-block-700 text-center">
+      <section class="carousel | padding-block-900 text-center">
         <h2 class="fs-secondary-heading fw-bold">What they’ve said</h2>
         <!--Carousel here-->
         <ul class="slider">
@@ -211,7 +201,9 @@
       </section>
 
       <!-- here in class | is used to separate visually component class from utility classes -->
-      <section class="cta | padding-block-900 bg-accent-400 text-neutral-100">
+      <section
+        class="cta | margin-top-900 padding-block-900 bg-accent-400 text-neutral-100"
+      >
         <div class="container">
           <div class="even-columns vertical-align-center">
             <div>
@@ -231,63 +223,55 @@
       class="primary-footer | padding-block-700 bg-neutral-900 text-neutral-100"
     >
       <div class="container">
-        <div class="primary-footer-wrapper">
-          <div class="primary-footer-logo-social">
-            <a href="#">
-              <svg class="logo" width="146" height="24">
-                <use xlink:href="images/logo.svg#logo"></use>
-              </svg>
-            </a>
-            <!-- aria-label is for screen readers so that blind people would be told what items ar being shown -->
-            <ul class="social-list" role="list" aria-label="social links">
-              <li>
-                <a aria-label="facebook" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-facebook"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="youtube" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-youtube"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="twitter" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-twitter"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="pinterest" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-pinterest"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="instragram" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-instagram"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="primary-footer-nav">
+        <div class="primary-footer__wrapper">
+          <a class="primary-footer__logo" href="#">
+            <svg class="logo" width="146" height="24">
+              <use xlink:href="images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <!-- aria-label is for screen readers so that blind people would be told what items ar being shown -->
+          <ul class="social-list" role="list" aria-label="social links">
+            <li>
+              <a aria-label="facebook" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="images/social-icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="youtube" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="images/social-icons.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="twitter" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="images/social-icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="pinterest" href="#">
+                <svg class="social-icon">
+                  <use
+                    xlink:href="images/social-icons.svg#icon-pinterest"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="instragram" href="#">
+                <svg class="social-icon">
+                  <use
+                    xlink:href="images/social-icons.svg#icon-instagram"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="primary-footer__nav-wrapper">
             <nav class="footer-nav" aria-label="footer">
               <ul class="flow" style="--flow-spacer: 1em" role="list">
                 <li><a href="#">Home</a></li>
@@ -300,13 +284,13 @@
               </ul>
             </nav>
           </div>
-          <div class="primary-footer-form">
-            <form action="">
-              <input type="email" placeholder="Updates in your inbox…" />
-              <button class="button" data-shadow="none">Go</button>
-            </form>
-            <p>Copyright 2020. All Rights Reserved</p>
-          </div>
+          <form class="primary-footer__form" action="">
+            <input type="email" placeholder="Updates in your inbox…" />
+            <button class="button" data-shadow="none">Go</button>
+          </form>
+          <p class="primary-footer__copyright">
+            Copyright 2020. All Rights Reserved
+          </p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,6 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.brow
 const primaryHeader = document.querySelector(".primary-header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
-const iconHamburger = document.querySelector(".icon-hamburger");
-const iconClose = document.querySelector(".icon-close");
 
 navToggle.addEventListener("click", () => {
   primaryNav.hasAttribute("data-visible")
@@ -12,8 +10,6 @@ navToggle.addEventListener("click", () => {
     : navToggle.setAttribute("aria-expanded", true);
   primaryNav.toggleAttribute("data-visible");
   primaryHeader.toggleAttribute("data-overlay");
-  iconHamburger.toggleAttribute("data-visible");
-  iconClose.toggleAttribute("data-visible");
 });
 
 const slider = new A11YSlider(document.querySelector(".slider"), {
